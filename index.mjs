@@ -23,7 +23,7 @@ async function main() {
         }: ${JSON.stringify(feed)}`
       );
 
-      if (slotNumber !== 0 && feed.publishTime - slotNumber !== 1) {
+      if (slotNumber !== 0 && feed.publishTime - slotNumber > 1) {
         console.log(
           `${new Date().toUTCString()} Missed slots between ${slotNumber} - ${
             feed.publishTime
